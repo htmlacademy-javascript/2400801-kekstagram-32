@@ -6,16 +6,13 @@ const pictureContainer = document.querySelector('.pictures');
 const pictureFragment = document.createDocumentFragment();
 const postsData = pubishPosts();
 
-postsData.forEach((post) => {
+postsData.forEach(({url, description, likes, comments}) => {
   const newPicture = pictureTemplate.cloneNode(true);
   const pictureImage = newPicture.querySelector('.picture__img');
-  pictureImage.src = `photos/${post.url}.jpg`;
-  pictureImage.alt = post.description;
-  const pictureLikes = newPicture.querySelector('.picture__likes');
-  pictureLikes.textContent = post.likes;
-  const pictureComments = newPicture.querySelector('.picture__comments');
-  const postComments = post.comments;
-  pictureComments.textContent = postComments.length;
+  pictureImage.src = `photos/${url}.jpg`;
+  pictureImage.alt = description;
+  newPicture.querySelector('.picture__likes').textContent = likes;
+  newPicture.querySelector('.picture__comments').textContent = comments.length;
   pictureFragment.append(newPicture);
 });
 
