@@ -59,7 +59,6 @@ loadSuccessMessage.addEventListener('click', (evt) => {
   if (evt.target === loadSuccessMessage || evt.target === loadSuccessButton) {
     loadSuccessMessage.remove();
     document.removeEventListener('keydown', onEscapeKeydownSuccess);
-
   }
 });
 
@@ -72,4 +71,3 @@ loadErrorMessage.addEventListener('click', (evt) => {
 });
 
 export {showDataError, showLoadError, showLoadSuccess};
-
