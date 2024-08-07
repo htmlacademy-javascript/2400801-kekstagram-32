@@ -4,7 +4,6 @@ const MAX_HASHTAG_QUANTITY = 5;
 const MAX_DESCRIPTION_LENGTH = 140;
 
 const imgUploadForm = document.querySelector('.img-upload__form');
-
 const hashtagInput = imgUploadForm.querySelector('.text__hashtags');
 const descriptionInput = imgUploadForm.querySelector('.text__description');
 
@@ -18,7 +17,6 @@ const etalonHashtag = /^#[a-zа-яё0-9]+$/i;
 const space = /\s+/g;
 
 const normalizeText = (input) => !input.value.length ? [] : input.value.toLowerCase().replaceAll(space, ' ').trim().split(' ');
-
 
 const checkMinLength = (input) => {
   const normalizedHashtag = normalizeText(input);
@@ -83,4 +81,3 @@ const resetFields = () => {
 
 export {resetValidation, checkValid, resetFields};
 
-// сделать прерывание показа ошибок в полях и установить приоритеты.

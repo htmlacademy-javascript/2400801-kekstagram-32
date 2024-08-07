@@ -5,7 +5,6 @@ import { initSlider, resetSlider } from './add-filter.js';
 import { showLoadError, showLoadSuccess} from './alert-handling.js';
 import { sendForm } from './connect-server.js';
 
-
 const imgUploadForm = document.querySelector('.img-upload__form');
 const imgUploadInput = imgUploadForm.querySelector('.img-upload__input');
 const imgUploadContainer = imgUploadForm.querySelector('.img-upload__overlay');

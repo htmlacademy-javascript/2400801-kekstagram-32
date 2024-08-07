@@ -61,8 +61,7 @@ loadSuccessMessage.addEventListener('click', (evt) => {
     document.removeEventListener('keydown', onEscapeKeydownSuccess);
 
   }
-}
-);
+});
 
 loadErrorMessage.addEventListener('click', (evt) => {
   if (evt.target === loadErrorMessage || evt.target === loadErrorButton) {
@@ -70,8 +69,7 @@ loadErrorMessage.addEventListener('click', (evt) => {
     document.removeEventListener('keydown', onEscapeKeydownError);
     document.addEventListener('keydown', onEscapeKeydownForm);
   }
-}
-);
+});
 
 export {showDataError, showLoadError, showLoadSuccess};
 

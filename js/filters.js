@@ -3,7 +3,7 @@ import { getRandomArrayElement, debounce} from './utils.js';
 
 const filters = document.querySelector('.img-filters');
 const RANDOM_LENGTH = 10;
-//const RENDERER_SORTING_DELAY = 500;
+const RENDERER_SORTING_DELAY = 500;
 
 const showFilters = () => {
   filters.classList.remove('img-filters--inactive');
@@ -51,7 +51,7 @@ const setFilterClick = (pictures) => {
     if (evt.target.classList.contains('img-filters__button')) {
       showSorting(pictures, evt.target);
     }
-  }));
+  }, RENDERER_SORTING_DELAY));
 };
 
 filters.addEventListener('click', (evt) => {
