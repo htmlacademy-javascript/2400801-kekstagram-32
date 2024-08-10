@@ -7,7 +7,6 @@ const effects = imgUploadForm.querySelector('.effects');
 const sliderContainer = imgUploadForm.querySelector('.img-upload__effect-level');
 const effectValue = imgUploadForm.querySelector('.effect-level__value');
 
-
 let chosenEffect = effect.DEFAULT;
 
 const isDefault = () => chosenEffect === effect.DEFAULT;
